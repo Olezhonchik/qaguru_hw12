@@ -7,10 +7,10 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.*;
 
-public class selenideTests extends TestBase {
+public class SelenideTests extends TestBase {
 
 @Test
-    public void myTest(){
+    public void selenideStepsTest(){
     SelenideLogger.addListener("allure", new AllureSelenide());
     open("/Olezhonchik");
     $x("//a[@href = '/Olezhonchik?tab=repositories']").click();
