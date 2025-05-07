@@ -2,7 +2,9 @@ package ru.vkusvillTests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.*;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.*;
@@ -13,6 +15,11 @@ public class StepsTests extends TestBase {
     public static final String repositoryName = "xpath";
 
     @Test
+    @Owner("Oleg Borzunov")
+    @Feature("Issue в репозитории")
+    @Story("Создание issue в репозитории")
+    @DisplayName("Проверка issue в репозитории")
+    @Severity(SeverityLevel.NORMAL)
     public void lambdaStepTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
@@ -39,6 +46,11 @@ public class StepsTests extends TestBase {
     }
 
     @Test
+    @Owner("Oleg Borzunov")
+    @Feature("Issue в репозитории")
+    @Story("Создание issue в репозитории")
+    @DisplayName("Проверка issue в репозитории")
+    @Severity(SeverityLevel.NORMAL)
     public void annotationStepTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         atSteps atSteps = new atSteps();
